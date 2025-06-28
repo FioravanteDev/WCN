@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD CUP NEWS - Copa do Mundo de Clubes 2025</title>
+    <link rel="stylesheet" href="worldcup-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="site-title">WORLD CUP NEWS</h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#noticias" class="nav-link active" data-tab="noticias">Notícias</a>
+                <a href="#times" class="nav-link" data-tab="times">Times</a>
+                <a href="#calendario" class="nav-link" data-tab="calendario">Calendário</a>
+                <a href="#classificacao" class="nav-link" data-tab="classificacao">Classificação</a>
+                <a href="#jogos" class="nav-link" data-tab="jogos">Jogos ao Vivo</a>
+            </nav>
+            
+            <div class="user-section">
+                <span class="user-email" id="userEmail">usuário@email.com</span>
+                <button class="logout-btn" onclick="logout()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 17L21 12L16 7" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12H9" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Sair
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Copa do Mundo de Clubes 2025</h2>
+                <p class="hero-subtitle">Acompanhe todas as notícias, resultados e novidades da maior competição de clubes do mundo</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">32</span>
+                        <span class="stat-label">Times</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">64</span>
+                        <span class="stat-label">Jogos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Continentes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="trophy-container">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9H4.5C3.83696 9 3.20107 8.73661 2.73223 8.26777C2.26339 7.79893 2 7.16304 2 6.5V4.5C2 3.83696 2.26339 3.20107 2.73223 2.73223C3.20107 2.26339 3.83696 2 4.5 2H19.5C20.163 2 20.7989 2.26339 21.2678 2.73223C21.7366 3.20107 22 3.83696 22 4.5V6.5C22 7.16304 21.7366 7.79893 21.2678 8.26777C20.7989 8.73661 20.163 9 19.5 9H18" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 9V13C8 14.0609 8.42143 15.0783 9.17157 15.8284C9.92172 16.5786 10.9391 17 12 17C13.0609 17 14.0783 16.5786 14.8284 15.8284C15.5786 15.0783 16 14.0609 16 13V9" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 17V22" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 22H16" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo das Abas -->
+    <main class="main-content">
+        <!-- Aba Notícias -->
+        <section id="noticias" class="tab-content active">
+            <div class="container">
+                <h3 class="section-title">Notícias em Destaque</h3>
+                
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23 7L16 12L23 17V7Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 17V7C16 5.89543 15.1046 5 14 5Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="news-badge">DESTAQUE</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-category">Competição</span>
+                                <span class="news-date">15 Dez 2024</span>
+                            </div>
+                            <h4 class="news-title">FIFA anuncia formato final da Copa do Mundo de Clubes 2025</h4>
+                            <p class="news-excerpt">A FIFA revelou os detalhes finais da nova edição da competição que reunirá os melhores clubes do mundo em formato expandido...</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#00FF88" stroke-width="2"/>
+                                    <path d="M8 14L12 10L16 14" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-category">Times</span>
+                                <span class="news-date">14 Dez 2024</span>
+                            </div>
+                            <h4 class="news-title">Manchester City confirma participação na competição</h4>
+                            <p class="news-excerpt">O atual campeão da Champions League será um dos favoritos na disputa pelo título mundial...</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-category">Sorteio</span>
+                                <span class="news-date">13 Dez 2024</span>
+                            </div>
+                            <h4 class="news-title">Sorteio dos grupos será realizado em janeiro</h4>
+                            <p class="news-excerpt">A cerimônia de sorteio dos grupos da Copa do Mundo de Clubes 2025 acontecerá no próximo mês...</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </article>
+                </div>
+
+                <h3 class="section-title">Últimas Notícias</h3>
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-item-image">
+                            <div class="image-placeholder small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-item-content">
+                            <div class="news-meta">
+                                <span class="news-category">América do Sul</span>
+                                <span class="news-date">12 Dez 2024</span>
+                            </div>
+                            <h4 class="news-item-title">Flamengo e Palmeiras representam o Brasil na competição</h4>
+                            <p class="news-item-excerpt">Os dois clubes brasileiros confirmaram suas participações e já começaram os preparativos...</p>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-item-image">
+                            <div class="image-placeholder small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-item-content">
+                            <div class="news-meta">
+                                <span class="news-category">Europa</span>
+                                <span class="news-date">11 Dez 2024</span>
+                            </div>
+                            <h4 class="news-item-title">Real Madrid busca recorde de títulos mundiais</h4>
+                            <p class="news-item-excerpt">O clube espanhol, maior vencedor da competição, quer aumentar sua vantagem histórica...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Times -->
+        <section id="times" class="tab-content">
+            <div class="container">
+                <h3 class="section-title">Times Participantes</h3>
+                
+                <div class="teams-filter">
+                    <button class="filter-btn active" data-continent="todos">Todos</button>
+                    <button class="filter-btn" data-continent="europa">Europa</button>
+                    <button class="filter-btn" data-continent="america-sul">América do Sul</button>
+                    <button class="filter-btn" data-continent="america-norte">América do Norte</button>
+                    <button class="filter-btn" data-continent="africa">África</button>
+                    <button class="filter-btn" data-continent="asia">Ásia</button>
+                </div>
+
+                <div class="teams-grid" id="teamsGrid">
+                    <!-- Times serão carregados via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Calendário -->
+        <section id="calendario" class="tab-content">
+            <div class="container">
+                <h3 class="section-title">Calendário de Jogos</h3>
+                
+                <div class="calendar-filter">
+                    <button class="filter-btn active" data-phase="todos">Todas as Fases</button>
+                    <button class="filter-btn" data-phase="grupos">Fase de Grupos</button>
+                    <button class="filter-btn" data-phase="oitavas">Oitavas de Final</button>
+                    <button class="filter-btn" data-phase="quartas">Quartas de Final</button>
+                    <button class="filter-btn" data-phase="semifinal">Semifinal</button>
+                    <button class="filter-btn" data-phase="final">Final</button>
+                </div>
+
+                <div class="matches-container" id="matchesContainer">
+                    <!-- Jogos serão carregados via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Classificação -->
+        <section id="classificacao" class="tab-content">
+            <div class="container">
+                <h3 class="section-title">Classificação</h3>
+                
+                <div class="standings-filter">
+                    <button class="filter-btn active" data-group="todos">Todos os Grupos</button>
+                    <button class="filter-btn" data-group="A">Grupo A</button>
+                    <button class="filter-btn" data-group="B">Grupo B</button>
+                    <button class="filter-btn" data-group="C">Grupo C</button>
+                    <button class="filter-btn" data-group="D">Grupo D</button>
+                    <button class="filter-btn" data-group="E">Grupo E</button>
+                    <button class="filter-btn" data-group="F">Grupo F</button>
+                    <button class="filter-btn" data-group="G">Grupo G</button>
+                    <button class="filter-btn" data-group="H">Grupo H</button>
+                </div>
+
+                <div class="standings-container" id="standingsContainer">
+                    <!-- Classificação será carregada via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Jogos ao Vivo -->
+        <section id="jogos" class="tab-content">
+            <div class="container">
+                <h3 class="section-title">Jogos ao Vivo</h3>
+                
+                <div class="live-matches" id="liveMatches">
+                    <!-- Jogos ao vivo serão carregados via JavaScript -->
+                </div>
+
+                <div class="upcoming-matches">
+                    <h4 class="subsection-title">Próximos Jogos</h4>
+                    <div class="upcoming-container" id="upcomingContainer">
+                        <!-- Próximos jogos serão carregados via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>WORLD CUP NEWS</h4>
+                    <p>Acompanhe todas as notícias da Copa do Mundo de Clubes 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#noticias">Notícias</a></li>
+                        <li><a href="#times">Times</a></li>
+                        <li><a href="#calendario">Calendário</a></li>
+                        <li><a href="#classificacao">Classificação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@worldcupnews.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WORLD CUP NEWS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="worldcup-script.js"></script>
+</body>
+</html> 

@@ -52,11 +52,19 @@ function validateForm(event) {
     loginButton.innerHTML = '<span>Entrando...</span>';
     loginButton.disabled = true;
     
-    // Simular delay de login
+    // Simular delay de login e redirecionar para a página de notícias
     setTimeout(() => {
-        showNotification('Login realizado com sucesso!', 'success');
-        loginButton.innerHTML = '<span>Entrar</span><svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-        loginButton.disabled = false;
+        showNotification('Login realizado com sucesso! Redirecionando...', 'success');
+        
+        // Salvar dados do usuário no localStorage
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('isLoggedIn', 'true');
+        
+        // Redirecionar para a página de notícias após 2 segundos
+        setTimeout(() => {
+            window.location.href = 'worldcup-news.html';
+        }, 2000);
+        
     }, 2000);
     
     return true;
@@ -266,6 +274,14 @@ function addLoadingEffects() {
 
 // Função para inicializar todas as funcionalidades
 function initializeApp() {
+    // Verificar se o usuário já está logado
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+        // Se já estiver logado, redirecionar para a página de notícias
+        window.location.href = 'worldcup-news.html';
+        return;
+    }
+    
     // Adicionar event listeners
     document.querySelector('.login-form').addEventListener('submit', validateForm);
     
