@@ -1,3 +1,14 @@
+// Função para verificar se o usuário já está logado
+function verificarLoginExistente() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const userEmail = localStorage.getItem('userEmail');
+    
+    if (isLoggedIn && userEmail) {
+        // Se já estiver logado, redirecionar para a página de notícias
+        window.location.href = 'worldcup-news.html';
+    }
+}
+
 // Função para alternar a visibilidade da senha
 function togglePassword() {
     const passwordInput = document.getElementById('password');
@@ -60,12 +71,12 @@ function validateForm(event) {
         localStorage.setItem('userEmail', email);
         localStorage.setItem('isLoggedIn', 'true');
         
-        // Redirecionar para a página de notícias após 2 segundos
+        // Redirecionar para a página de notícias após 1 segundo
         setTimeout(() => {
             window.location.href = 'worldcup-news.html';
-        }, 2000);
+        }, 1000);
         
-    }, 2000);
+    }, 1500);
     
     return true;
 }
@@ -275,12 +286,7 @@ function addLoadingEffects() {
 // Função para inicializar todas as funcionalidades
 function initializeApp() {
     // Verificar se o usuário já está logado
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
-        // Se já estiver logado, redirecionar para a página de notícias
-        window.location.href = 'worldcup-news.html';
-        return;
-    }
+    verificarLoginExistente();
     
     // Adicionar event listeners
     document.querySelector('.login-form').addEventListener('submit', validateForm);

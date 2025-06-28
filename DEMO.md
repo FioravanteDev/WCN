@@ -1,268 +1,172 @@
-# 🎮 DEMONSTRAÇÃO - WORLD CUP NEWS
+# 🏆 DEMO - Copa do Mundo de Clubes FIFA 2025
 
-## 🚀 Como Testar o Sistema Completo
+## 📋 Visão Geral
+Este é um sistema completo de informações sobre a **Copa do Mundo de Clubes FIFA 2025**, com dados reais dos 32 clubes participantes, classificação atualizada, calendário completo e chaveamento do mata-mata.
 
-### 📋 Pré-requisitos
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Todos os arquivos do projeto na mesma pasta
+## 🎯 Funcionalidades Principais
 
-### 🎯 Passo a Passo
+### 🔐 Sistema de Login
+- **Página inicial**: `index.html`
+- **Design**: Menu preto com detalhes verdes e letras brancas
+- **Validação**: Formulário com validação de campos obrigatórios
+- **Segurança**: Toggle para mostrar/ocultar senha
+- **Feedback**: Notificações visuais para sucesso/erro
 
-#### 1. **Acesso Inicial**
-```
-1. Abra o arquivo: index.html
-2. Você verá a tela de login com design moderno
-3. Preencha qualquer e-mail válido (ex: usuario@email.com)
-4. Digite qualquer senha com 6+ caracteres
-5. Clique em "Entrar" ou pressione Enter
-```
+### 📰 Página de Notícias: `worldcup-news.html`
+Após o login bem-sucedido, o usuário é redirecionado para a página principal com **4 abas funcionais**:
 
-#### 2. **Navegação pelas Abas**
-Após o login, você será redirecionado para o sistema principal com 5 abas:
+#### 1️⃣ **ABA TIMES** 
+- **32 clubes reais** organizados em 8 grupos (A-H)
+- **Informações completas**: Nome, país, escudo e grupo
+- **Layout responsivo** com cards visuais
+- **Filtros por grupo** disponíveis
 
-**🔍 Aba "Notícias" (Padrão)**
-- Notícias em destaque da Copa do Mundo
-- Lista de últimas notícias
-- Cards interativos com efeitos hover
+**Times Participantes Reais:**
+- **Grupo A**: Palmeiras (BRA), Inter Miami (EUA), Porto (POR), Al Ahly (EGY)
+- **Grupo B**: PSG (FRA), Botafogo (BRA), Atlético Madrid (ESP), Seattle Sounders (EUA)
+- **Grupo C**: Benfica (POR), Bayern (ALE), Boca Juniors (ARG), Auckland City (NZL)
+- **Grupo D**: Flamengo (BRA), Chelsea (ING), Espérance (TUN), LAFC (EUA)
+- **Grupo E**: Inter (ITA), Monterrey (MEX), River Plate (ARG), Urawa Reds (JAP)
+- **Grupo F**: Borussia (ALE), Fluminense (BRA), Sundowns (AFS), Ulsan Hyundai (COR)
+- **Grupo G**: Manchester City (ING), Juventus (ITA), Al Ain (EAU), Wydad AC (MAR)
+- **Grupo H**: Real Madrid (ESP), Al-Hilal (ARA), RB Salzburg (AUT), Pachuca (MEX)
 
-**⚽ Aba "Times"**
-- **32 times participantes** organizados por continente
-- **Filtros funcionais**: Clique nos botões para filtrar por região
-- **Cards detalhados** com estatísticas de cada time
-- **Efeitos visuais** ao passar o mouse
+#### 2️⃣ **ABA CLASSIFICAÇÃO**
+- **Dados reais** da fase de grupos
+- **Colunas completas**: PTS, PJ, VIT, E, DER, GM, GC, SG
+- **Últimos 5 jogos** com bolinhas coloridas:
+  - 🟢 Verde = Vitória
+  - ⚫ Cinza = Empate  
+  - 🔴 Vermelho = Derrota
+- **Classificação atualizada** por grupo
 
-**📅 Aba "Calendário" (REORGANIZADA)**
-- **Estrutura correta da Copa do Mundo de Clubes**:
-  - **Fase de Grupos**: 24 jogos (8 grupos × 3 jogos cada)
-  - **Oitavas de Final**: 8 jogos
-  - **Quartas de Final**: 4 jogos
-  - **Semifinal**: 2 jogos
-  - **Final**: 1 jogo
-- **Cabeçalhos organizados** por fase com contadores
-- **Filtros por fase**: Grupos, Oitavas, Quartas, Semifinal, Final
-- **Informações completas**: Times, placar, data, horário, status
-- **Layout responsivo** que se adapta ao conteúdo
+#### 3️⃣ **ABA CALENDÁRIO**
+- **3 rodadas completas** da fase de grupos
+- **48 jogos** com datas e placares reais
+- **Estrutura correta**: 8 grupos × 4 times × 3 jogos = 24 jogos por rodada
+- **Filtros por rodada** disponíveis
+- **Layout organizado** por fases
 
-**📊 Aba "Classificação"**
-- **8 grupos** (A-H) com tabelas completas
-- **Filtros por grupo**: Clique para ver apenas um grupo específico
-- **Critérios de desempate** implementados
-- **Estatísticas detalhadas** de cada time
+**Rodadas Disponíveis:**
+- **Rodada 1**: 15/06/2025 (16 jogos)
+- **Rodada 2**: 18/06/2025 (16 jogos)  
+- **Rodada 3**: 21/06/2025 (16 jogos)
 
-**🔴 Aba "Jogos ao Vivo"**
-- **Jogos simulados ao vivo** com efeitos especiais
-- **Próximos jogos** agendados
-- **Indicadores visuais** "AO VIVO" com animações
-- **Placares em tempo real** (simulados)
+#### 4️⃣ **ABA MATA-MATA**
+- **Chaveamento completo** a partir das Oitavas de Final
+- **8 jogos das Oitavas** com datas e horários reais
+- **Estrutura de árvore** para Quartas, Semis e Final
+- **Campos "A Confirmar"** para fases futuras
+- **Layout visual** com linhas conectando as fases
 
-### 🎮 Funcionalidades Interativas
+**Fases do Mata-Mata:**
+- **Oitavas de Final**: 28/06 a 01/07/2025
+- **Quartas de Final**: 04-05/07/2025
+- **Semifinais**: 08/07/2025
+- **Final**: 12/07/2025
 
-#### **Sistema de Filtros**
-- **Times**: Filtre por Europa, América do Sul, América do Norte, África, Ásia
-- **Calendário**: Filtre por fase da competição (Grupos, Oitavas, Quartas, Semifinal, Final)
-- **Classificação**: Filtre por grupo específico
+## 🎨 Design e UX
 
-#### **Efeitos Visuais**
-- **Hover Effects**: Passe o mouse sobre cards e botões
-- **Animações de Entrada**: Elementos aparecem com animação suave
-- **Transições**: Movimentos fluidos entre estados
-- **Notificações**: Feedback visual para ações do usuário
+### **Tema Visual**
+- **Cores**: Preto, verde (#00ff88) e branco
+- **Layout**: Moderno e responsivo
+- **Tipografia**: Clean e legível
+- **Efeitos**: Hover, transições suaves
 
-#### **Responsividade**
-- **Mobile**: Teste em telas pequenas (320px+)
-- **Tablet**: Teste em telas médias (768px+)
-- **Desktop**: Teste em telas grandes (1024px+)
+### **Responsividade**
+- **Desktop**: Layout completo com todas as informações
+- **Tablet**: Adaptação automática dos elementos
+- **Mobile**: Versão otimizada com navegação simplificada
 
-### 📊 Dados Disponíveis
+### **Interatividade**
+- **Abas funcionais** com transições suaves
+- **Cards com hover effects**
+- **Filtros dinâmicos** por grupo/rodada
+- **Feedback visual** em todas as ações
 
-#### **Times Participantes (32)**
-```
-EUROPA (8):
-- Manchester City (Inglaterra)
-- Real Madrid (Espanha)
-- Bayern Munich (Alemanha)
-- PSG (França)
-- Inter Milan (Itália)
-- Porto (Portugal)
-- Ajax (Holanda)
-- Benfica (Portugal)
+## 🚀 Como Usar
 
-AMÉRICA DO SUL (6):
-- Flamengo (Brasil)
-- Palmeiras (Brasil)
-- River Plate (Argentina)
-- Boca Juniors (Argentina)
-- Peñarol (Uruguai)
-- Colo-Colo (Chile)
-
-AMÉRICA DO NORTE (2):
-- Club América (México)
-- LAFC (Estados Unidos)
-
-ÁFRICA (4):
-- Al Ahly (Egito)
-- Wydad Casablanca (Marrocos)
-- Mamelodi Sundowns (África do Sul)
-- Esperance (Tunísia)
-
-ÁSIA (4):
-- Urawa Red Diamonds (Japão)
-- Al Hilal (Arábia Saudita)
-- Jeonbuk Hyundai (Coreia do Sul)
-- Melbourne City (Austrália)
+### **1. Acesso Inicial**
+```bash
+# Abra o arquivo index.html no navegador
+# Ou use um servidor local:
+python -m http.server 8000
+# Acesse: http://localhost:8000
 ```
 
-#### **Estrutura da Competição (REORGANIZADA)**
-```
-FASE DE GRUPOS: 24 jogos
-- 8 grupos com 4 times cada
-- 3 jogos por grupo (total: 8 × 3 = 24 jogos)
+### **2. Login**
+- **Usuário**: Qualquer valor (campo obrigatório)
+- **Senha**: Qualquer valor (campo obrigatório)
+- **Clique**: "Entrar" para acessar o sistema
 
-MATA-MATA: 15 jogos
-- Oitavas de Final: 8 jogos
-- Quartas de Final: 4 jogos
-- Semifinal: 2 jogos
-- Final: 1 jogo
+### **3. Navegação**
+- **Clique nas abas** para alternar entre seções
+- **Use os filtros** para encontrar informações específicas
+- **Explore os dados** de cada grupo/time
 
-TOTAL: 39 jogos
-```
+### **4. Funcionalidades Específicas**
 
-#### **Detalhamento dos Grupos**
-```
-GRUPO A: Manchester City, Real Madrid, Al Ahly, [4º time]
-GRUPO B: Bayern Munich, PSG, Wydad Casablanca, [4º time]
-GRUPO C: Inter Milan, Porto, Mamelodi Sundowns, [4º time]
-GRUPO D: Ajax, Benfica, Esperance, [4º time]
-GRUPO E: Flamengo, Palmeiras, Urawa Red Diamonds, [4º time]
-GRUPO F: River Plate, Boca Juniors, Al Hilal, [4º time]
-GRUPO G: Peñarol, Colo-Colo, Jeonbuk Hyundai, [4º time]
-GRUPO H: Club América, LAFC, Melbourne City, [4º time]
-```
+#### **Aba Times**
+- Visualize todos os 32 clubes participantes
+- Informações organizadas por grupo
+- Design com escudos e cores dos times
 
-### 🎨 Recursos Visuais
+#### **Aba Classificação**  
+- Acompanhe a pontuação real dos times
+- Veja estatísticas completas (vitórias, empates, derrotas)
+- Últimos resultados com código de cores
 
-#### **Design System**
-- **Cores**: Preto (#0a0a0a) + Verde (#00FF88)
-- **Tipografia**: Inter (Google Fonts)
-- **Glassmorphism**: Efeitos de transparência
-- **Gradientes**: Visuais modernos
+#### **Aba Calendário**
+- Todos os jogos da fase de grupos
+- Placares reais e datas específicas
+- Organização por rodadas
 
-#### **Animações**
-- **Entrada**: Elementos aparecem com fade-in
-- **Hover**: Transformações suaves
-- **Scroll**: Efeito parallax
-- **Partículas**: Efeitos de fundo
+#### **Aba Mata-Mata**
+- Chaveamento completo do torneio
+- Datas e horários das eliminatórias
+- Estrutura visual da competição
 
-### 🔧 Funcionalidades Técnicas
+## 📊 Dados Reais Incluídos
 
-#### **Sistema de Abas**
-- Navegação sem recarregar a página
-- Estado persistente entre abas
-- Animações de transição
+### **Classificação Atualizada**
+- **Grupo A**: Palmeiras e Inter Miami lideram com 5 pontos
+- **Grupo B**: PSG, Botafogo e Atlético Madrid com 6 pontos
+- **Grupo C**: Benfica lidera com 7 pontos, Bayern em 2º
+- **Grupo D**: Flamengo lidera com 7 pontos
+- **Grupo E**: Inter lidera com 7 pontos
+- **Grupo F**: Borussia lidera com 7 pontos
+- **Grupo G**: Manchester City lidera com 9 pontos
+- **Grupo H**: Real Madrid lidera com 7 pontos
 
-#### **Filtros Dinâmicos**
-- Filtragem em tempo real
-- Interface responsiva
-- Feedback visual
+### **Jogos Realizados**
+- **Rodada 1**: 15/06/2025 - 16 jogos
+- **Rodada 2**: 18/06/2025 - 16 jogos  
+- **Rodada 3**: 21/06/2025 - 16 jogos
 
-#### **Dados Simulados**
-- Times com estatísticas realistas
-- Jogos com resultados plausíveis
-- Classificação com critérios corretos
+### **Mata-Mata Confirmado**
+- **Oitavas**: 8 confrontos definidos
+- **Quartas**: Aguardando resultados
+- **Semis**: Aguardando resultados
+- **Final**: 12/07/2025
 
-### 📱 Teste de Responsividade
+## 🔧 Tecnologias Utilizadas
 
-#### **Mobile (320px - 767px)**
-- Menu colapsa em hambúrguer
-- Cards empilham verticalmente
-- Filtros ficam em coluna
-- Touch-friendly
-- Cabeçalhos das fases se adaptam
+- **HTML5**: Estrutura semântica
+- **CSS3**: Estilos modernos e responsivos
+- **JavaScript**: Funcionalidades interativas
+- **Design**: Interface esportiva profissional
 
-#### **Tablet (768px - 1023px)**
-- Layout intermediário
-- Grid adaptativo
-- Navegação otimizada
+## 📱 Compatibilidade
 
-#### **Desktop (1024px+)**
-- Layout completo
-- Grid de 3-4 colunas
-- Hover effects ativos
+- ✅ **Chrome/Edge**: Funcionamento completo
+- ✅ **Firefox**: Funcionamento completo  
+- ✅ **Safari**: Funcionamento completo
+- ✅ **Mobile**: Responsivo em todos os dispositivos
 
-### 🎯 Pontos de Destaque
+## 🎯 Objetivo
 
-#### **UX/UI**
-- **Intuitivo**: Navegação clara e lógica
-- **Responsivo**: Funciona em qualquer dispositivo
-- **Acessível**: Suporte a teclado e leitores
-- **Performance**: Carregamento rápido
-
-#### **Funcionalidades**
-- **Completo**: Todas as informações da competição
-- **Interativo**: Filtros e navegação dinâmicos
-- **Realista**: Dados que fazem sentido
-- **Extensível**: Fácil de adicionar novos dados
-
-### 🔍 Como Personalizar
-
-#### **Alterar Dados**
-Edite o arquivo `worldcup-script.js`:
-```javascript
-// Adicionar novo time
-const newTeam = {
-    id: 25,
-    name: "Novo Time",
-    continent: "europa",
-    country: "País",
-    group: "A",
-    points: 0,
-    wins: 0,
-    draws: 0,
-    losses: 0,
-    goalsFor: 0,
-    goalsAgainst: 0
-};
-
-// Adicionar novo jogo
-const newMatch = {
-    id: 40,
-    phase: "grupos", // ou "oitavas", "quartas", "semifinal", "final"
-    group: "A", // apenas para fase de grupos
-    team1: "Time A",
-    team2: "Time B",
-    score1: 0,
-    score2: 0,
-    date: "2025-01-30",
-    time: "20:00",
-    status: "Agendado"
-};
-```
-
-#### **Alterar Cores**
-Edite o arquivo `worldcup-styles.css`:
-```css
-:root {
-    --primary-color: #00FF88;    /* Verde principal */
-    --background-color: #0a0a0a; /* Fundo preto */
-    --text-color: #ffffff;       /* Texto branco */
-}
-```
-
-### 🚀 Próximos Passos
-
-1. **Teste todas as abas** e funcionalidades
-2. **Experimente os filtros** em cada seção
-3. **Teste a responsividade** em diferentes dispositivos
-4. **Explore os efeitos visuais** e animações
-5. **Personalize os dados** conforme necessário
-
-### 📞 Suporte
-
-Se encontrar algum problema ou tiver dúvidas:
-- Verifique se todos os arquivos estão na mesma pasta
-- Certifique-se de que o navegador é compatível
-- Teste em modo incógnito para evitar cache
+Este sistema oferece uma **experiência completa e realista** para acompanhar a Copa do Mundo de Clubes FIFA 2025, com dados atualizados, interface moderna e funcionalidades interativas que simulam um portal esportivo profissional.
 
 ---
 
-**🎉 Divirta-se explorando o WORLD CUP NEWS!** 
+**🏆 Sistema atualizado com dados reais da Copa do Mundo de Clubes FIFA 2025!** 

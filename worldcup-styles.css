@@ -230,6 +230,11 @@ body::before {
     display: block;
 }
 
+/* Garantir que a seção notícias seja exibida por padrão */
+#noticias {
+    display: block;
+}
+
 .section-title {
     font-size: 2rem;
     font-weight: 600;
@@ -1024,4 +1029,362 @@ body::before {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 255, 136, 0.7);
+}
+
+/* Estilos para as bolinhas de resultado na classificação */
+.ultimos-jogos {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+.resultado {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.resultado.verde {
+    color: #28a745;
+}
+
+.resultado.cinza {
+    color: #6c757d;
+}
+
+.resultado.vermelho {
+    color: #dc3545;
+}
+
+/* Melhorias na tabela de classificação */
+.tabela-classificacao {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background: #004d26;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.tabela-classificacao th {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tabela-classificacao td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #FFFFFF !important;
+    background: #004d26;
+}
+
+.tabela-classificacao tr:nth-child(even) {
+    background: #004d26;
+}
+
+.tabela-classificacao tr:nth-child(even) td {
+    color: #FFFFFF !important;
+    background: #004d26;
+}
+
+.tabela-classificacao tr:hover {
+    background: #006633;
+}
+
+.tabela-classificacao tr:hover td {
+    color: #FFFFFF !important;
+    background: #006633;
+}
+
+.tabela-classificacao tr:focus td {
+    color: #FFFFFF !important;
+    background: #006633;
+}
+
+.tabela-classificacao td:first-child {
+    font-weight: bold;
+    color: #FFFFFF !important;
+    background: #004d26;
+}
+
+.tabela-classificacao td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+    color: #FFFFFF !important;
+    background: #004d26;
+}
+
+.tabela-classificacao td:nth-child(3) {
+    font-weight: bold;
+    color: #FFFFFF !important;
+    background: #004d26;
+}
+
+/* Responsividade para tabelas */
+@media (max-width: 768px) {
+    .tabela-classificacao {
+        font-size: 12px;
+    }
+    
+    .tabela-classificacao th,
+    .tabela-classificacao td {
+        padding: 8px 4px;
+    }
+    
+    .tabela-classificacao th:nth-child(4),
+    .tabela-classificacao th:nth-child(5),
+    .tabela-classificacao th:nth-child(6),
+    .tabela-classificacao th:nth-child(7),
+    .tabela-classificacao td:nth-child(4),
+    .tabela-classificacao td:nth-child(5),
+    .tabela-classificacao td:nth-child(6),
+    .tabela-classificacao td:nth-child(7) {
+        display: none;
+    }
+}
+
+/* Estilos para as seções carregadas dinamicamente */
+.grupo-times {
+    margin-bottom: 2rem;
+}
+
+.titulo-grupo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.times-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.time-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.time-card:hover {
+    transform: translateY(-5px);
+    border-color: #00FF88;
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+}
+
+.escudo {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+}
+
+.info-time h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.info-time p {
+    font-size: 0.9rem;
+    color: #00FF88;
+    margin: 0;
+}
+
+/* Estilos para o calendário */
+.rodada-jogos {
+    margin-bottom: 2rem;
+}
+
+.titulo-rodada {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.jogos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.jogo-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.jogo-card:hover {
+    transform: translateY(-5px);
+    border-color: #00FF88;
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+}
+
+.data-jogo {
+    font-size: 0.9rem;
+    color: #00FF88;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.times-jogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.time {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.placar {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00FF88;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.grupo-jogo {
+    font-size: 0.8rem;
+    color: #888888;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Estilos para o mata-mata */
+.fase-mata-mata {
+    margin-bottom: 2rem;
+}
+
+.titulo-fase {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.jogos-mata-mata {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.jogo-mata-mata-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.jogo-mata-mata-card:hover {
+    transform: translateY(-5px);
+    border-color: #00FF88;
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+}
+
+.data-hora {
+    font-size: 0.9rem;
+    color: #00FF88;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.confronto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confronto .time {
+    font-weight: 600;
+    color: #ffffff;
+    flex: 1;
+    text-align: center;
+}
+
+.confronto .vs {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: #00FF88;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .times-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .jogos-grid,
+    .jogos-mata-mata {
+        grid-template-columns: 1fr;
+    }
+    
+    .times-jogo,
+    .confronto {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .confronto .vs {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Estilos para grupos de classificação */
+.grupo-classificacao {
+    margin-bottom: 2rem;
+}
+
+.grupo-classificacao .titulo-grupo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
 } 
